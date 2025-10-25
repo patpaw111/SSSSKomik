@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SSSS Komik - Dokumentasi Proyek
 
-## Getting Started
+## 📋 Deskripsi Proyek
+Proyek SSSS Komik adalah aplikasi web yang dibangun menggunakan Next.js 15 dengan TypeScript dan Tailwind CSS v4.
 
-First, run the development server:
+## 🛠️ Tech Stack
+- **Framework**: Next.js 15.5.5
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS v4
+- **Linting**: ESLint dengan Next.js config
+- **Font**: Geist Sans & Geist Mono
+- **Package Manager**: npm
 
+## 🚀 Setup Development
+
+### Prerequisites
+- Node.js 18+ 
+- npm atau yarn
+
+### Installation
 ```bash
+# Clone repository
+git clone <repository-url>
+cd sssskomik
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Available Scripts
+```bash
+npm run dev      # Development server dengan Turbopack
+npm run build    # Build production dengan Turbopack
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Struktur Proyek
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+sssskomik/
+├── src/
+│   ├── app/                 # App Router (Next.js 13+)
+│   │   ├── globals.css      # Global styles
+│   │   ├── layout.tsx       # Root layout
+│   │   └── page.tsx         # Home page
+│   ├── components/          # Reusable components
+│   └── lib/                 # Utility functions
+├── public/                  # Static assets
+├── package.json
+├── tsconfig.json           # TypeScript config
+├── next.config.ts          # Next.js config
+├── eslint.config.mjs       # ESLint config
+└── tailwind.config.js      # Tailwind config
+```
 
-## Learn More
+## 🎨 Styling Guidelines
 
-To learn more about Next.js, take a look at the following resources:
+### Tailwind CSS v4
+- Menggunakan Tailwind CSS v4 dengan konfigurasi inline
+- Custom CSS variables untuk theme:
+  - `--background`: Background color
+  - `--foreground`: Text color
+- Dark mode support dengan `prefers-color-scheme`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Font System
+- **Sans**: Geist Sans (primary)
+- **Mono**: Geist Mono (code)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Konfigurasi
 
-## Deploy on Vercel
+### TypeScript
+- Strict mode enabled
+- Path mapping: `@/*` → `./src/*`
+- Target: ES2017
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ESLint
+- Next.js core web vitals
+- TypeScript support
+- Ignore patterns: node_modules, .next, out, build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Development Guidelines
+
+### File Naming
+- Components: PascalCase (`UserProfile.tsx`)
+- Pages: lowercase (`page.tsx`, `layout.tsx`)
+- Utilities: camelCase (`formatDate.ts`)
+- Constants: UPPER_SNAKE_CASE (`API_ENDPOINTS.ts`)
+
+### Import Order
+1. React imports
+2. Next.js imports
+3. Third-party libraries
+4. Local components
+5. Local utilities
+6. Types
+
+### Component Structure
+```tsx
+// Types
+interface ComponentProps {
+  // props definition
+}
+
+// Component
+export default function Component({ prop }: ComponentProps) {
+  // hooks
+  // handlers
+  // render
+  return (
+    <div>
+      {/* JSX */}
+    </div>
+  );
+}
+```
+
+## 🌐 Environment Variables
+Buat file `.env.local` untuk environment variables:
+```bash
+# Example
+NEXT_PUBLIC_API_URL=http://localhost:3000/api
+DATABASE_URL=your_database_url
+```
+
+## 🚀 Deployment
+Proyek siap untuk deployment di Vercel atau platform lainnya.
+
+### Build untuk Production
+```bash
+npm run build
+npm run start
+```
+
+## 📚 Resources
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs)
+
+## 🤝 Contributing
+Lihat [CONTRIBUTING.md](./CONTRIBUTING.md) untuk panduan kontribusi.
+
+## 📄 License
+[License information]
