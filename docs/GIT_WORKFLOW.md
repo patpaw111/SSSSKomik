@@ -43,6 +43,108 @@ Dokumentasi ini menjelaskan workflow Git yang digunakan dalam proyek SSSS Komik 
 - **Source**: Dibuat dari `develop`
 - **Target**: Merge ke `main` dan `develop`
 
+## 📝 Branch Naming Conventions
+
+### Aturan Umum
+Semua branch harus mengikuti konvensi naming yang konsisten untuk memudahkan identifikasi dan maintenance.
+
+### Format Naming
+```
+<type>/<descriptive-name>
+```
+
+### Branch Types & Examples
+
+#### Feature Branches
+```bash
+feature/user-authentication
+feature/comic-reader
+feature/search-functionality
+feature/payment-integration
+```
+
+#### Bugfix Branches
+```bash
+bugfix/login-validation-error
+bugfix/responsive-layout-issue
+bugfix/image-loading-problem
+```
+
+#### Hotfix Branches
+```bash
+hotfix/security-vulnerability
+hotfix/payment-gateway-error
+hotfix/critical-database-issue
+```
+
+#### Release Branches
+```bash
+release/v1.0.0
+release/v1.2.0
+release/v2.0.0-beta
+```
+
+### Best Practices
+
+#### ✅ Do's
+- **Gunakan lowercase** untuk semua nama branch
+- **Gunakan hyphen (-)** sebagai pemisah kata
+- **Nama yang deskriptif** dan jelas menjelaskan tujuan branch
+- **Singkat tapi informatif** (maksimal 3-4 kata)
+- **Gunakan kata kerja** untuk feature branches (e.g., `add`, `implement`, `create`)
+- **Gunakan kata benda** untuk bugfix (e.g., `error`, `issue`, `bug`)
+
+#### ❌ Don'ts
+- ❌ Jangan gunakan **underscore (_)** atau **spasi**
+- ❌ Jangan gunakan **uppercase** atau **camelCase**
+- ❌ Jangan gunakan nama yang **terlalu panjang** atau **tidak jelas**
+- ❌ Jangan gunakan **special characters** (!, @, #, $, %, dll)
+- ❌ Jangan gunakan nama yang **tidak deskriptif** (e.g., `fix`, `update`, `test`)
+- ❌ Jangan gunakan **nama personal** atau **tanggal** di branch name
+
+### Examples
+
+#### ✅ Good Branch Names
+```bash
+feature/user-profile-page
+feature/comic-detail-view
+bugfix/login-form-validation
+bugfix/mobile-responsive-header
+hotfix/payment-processing-error
+release/v1.0.0
+```
+
+#### ❌ Bad Branch Names
+```bash
+feature/userProfile        # camelCase
+feature/user_profile       # underscore
+feature/User-Authentication # uppercase
+fix-bug                    # tidak jelas bug apa
+test                       # terlalu generic
+update                     # tidak deskriptif
+john-feature               # nama personal
+2024-01-15-update          # tanggal
+feature/!@#$%              # special characters
+```
+
+### Naming Guidelines by Type
+
+#### Feature Branches
+- Format: `feature/<action>-<what>`
+- Contoh: `feature/add-user-dashboard`, `feature/implement-search`
+
+#### Bugfix Branches
+- Format: `bugfix/<component>-<issue>`
+- Contoh: `bugfix/login-form-validation`, `bugfix/header-responsive`
+
+#### Hotfix Branches
+- Format: `hotfix/<critical-issue>`
+- Contoh: `hotfix/security-patch`, `hotfix/database-connection`
+
+#### Release Branches
+- Format: `release/v<major>.<minor>.<patch>`
+- Contoh: `release/v1.0.0`, `release/v1.2.3`
+
 ## 🔄 Git Workflow Process
 
 ### 1. Starting New Work
