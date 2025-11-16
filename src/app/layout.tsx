@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
+import ConditionalNavbar from "@/components/navbar/ConditionalNavbar";
 
 export const metadata: Metadata = {
   title: "SSSS Komik",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className="bg-base-dark transition-all duration-300 min-h-[100dvh] flex flex-col mb-83 lg:mb-0">
-        <Navbar />
+        <ConditionalNavbar />
         {children}
       </body>
     </html>
