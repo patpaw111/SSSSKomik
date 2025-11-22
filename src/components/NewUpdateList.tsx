@@ -2,12 +2,12 @@ import SeriesCard from "@/components/utils/card/card";
 
 export default function NewUpdateList() {
   return (
-    <section className="md:py-24 py-12 px-12 md:px-24">
-      <div className="container mx-auto">
+    <section className="py-8 px-4 sm:py-12 sm:px-6 md:py-16 md:px-12 lg:py-24 lg:px-24">
+      <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col">
-        <h2 className="font-semibold md:text-24 md:leading-28 text-base-white text-20 leading-24">Update</h2>
+        <h2 className="font-semibold text-base-white text-lg leading-6 sm:text-xl sm:leading-7 md:text-2xl md:leading-7 lg:text-24 lg:leading-28 mb-4 sm:mb-6 md:mb-8">Update</h2>
         <div>        
-            <div className="gap-x-16 gap-y-24 grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8">
             <SeriesCard
               seriesId="the-heavenly-demon"
               title="The Heavenly Demon Can't Live A Normal Life"
